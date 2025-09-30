@@ -1,0 +1,53 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+**/dist/
+**/build/
+**/.cache/
+**/.parcel-cache/
+**/.next/
+**/coverage/
+**/.turbo/
+**/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Misc
+*.tgz
+*.swp
+*.swm
+*.swo
+*.orig
+*.rej
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
