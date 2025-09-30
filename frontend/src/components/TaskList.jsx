@@ -6,7 +6,6 @@ import '../styles/carousel.css';
 /*
   Endless Carousel approach (vanilla):
   - Duplicate the list once so scrolling wraps seamlessly
-  - Auto-scroll using requestAnimationFrame and reset when passing one list width
   - Pause on hover and when list is empty
 */
 
