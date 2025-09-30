@@ -32,7 +32,6 @@ Model shape:
 - Components: App, TaskList, TaskItem, TaskForm, TaskFilter
 - Carousel: index‑based (autoplay, arrows, dots). Inspired by this approach:
   https://github.com/JohanAlves/yt-react-carousel
-- No UI libraries. Plain CSS.
 
 ## Notes
 - Backend: Express + CORS + ESM, runs on 4000
