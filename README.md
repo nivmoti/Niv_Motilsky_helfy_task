@@ -45,6 +45,6 @@ Model shape:
 
 ## Time (fill in)
 - Backend: 30 mins
-- Frontend: 90 mins
+- Frontend: 150 mins
 - Styling/Polish: 60 mins
 - Debugging: 20 mins
