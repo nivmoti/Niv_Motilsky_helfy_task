@@ -1,14 +1,49 @@
-.carousel { position: relative; overflow: visible; border: 0; background: transparent; padding: 16px 56px; }
-.carousel.empty { padding: 20px; text-align: center; color: #666; }
 
-/* Styles inspired by https://github.com/JohanAlves/yt-react-carousel */
-.carousel_wrapper { position: relative; display: grid; place-items: center; width: fit-content; max-width: 90vw; margin: 0 auto; min-height: 220px; }
-.carousel_card { grid-area: 1 / 1; width: auto; display: flex; justify-content: center; opacity: 0; transform: scale(0.92); transition: all 300ms ease; pointer-events: none; }
-.carousel_card-active { opacity: 1; transform: scale(1); pointer-events: auto; }
-.carousel_arrow_left, .carousel_arrow_right { position: absolute; top: 50%; transform: translateY(-50%); font-size: 28px; width: 36px; height: 36px; line-height: 36px; text-align: center; border-radius: 50%; background: rgba(0,0,0,0.05); cursor: pointer; user-select: none; z-index: 2; }
-.carousel_arrow_left { left: -32px; }
-.carousel_arrow_right { right: -32px; }
-.carousel_pagination { position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 2; }
-.pagination_dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; }
-.pagination_dot-active { background: #222; }
-.carousel_card .task-item { width: clamp(260px, 70vw, 320px); margin: 0 auto; }
+
+.carousel {
+  width: 100%;
+  display: block;
+}
+
+.carousel_empty {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.carousel_viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.carousel_track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 16px;
+  will-change: transform;
+}
+
+.carousel_item {
+  flex: 0 0 auto; /* don't force full width; allow several items per view */
+}
+
+.carousel_viewport:active {
+  cursor: grabbing;
+}
+
+.task-item {
+  box-sizing: border-box;
+  width: clamp(260px, 46vw, 340px); /* controls card width so multiple fit */
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
